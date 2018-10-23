@@ -1,10 +1,10 @@
-numpy
-scipy
+matplotlib
 tensorflow
-tensorflow-gpu
 keras
-ipython
+numpy==1.14.5
+pandas
 jupyter
-six
-protobuf==3.1.0
-wheel
+opencv-python
+sklearn
+tqdm
+scikit-image
