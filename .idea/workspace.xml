@@ -2,47 +2,44 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f8aaaf08-8cba-4de9-91e8-0b38727d0275" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/.ipynb_checkpoints/FacialKeypointsRecognition-checkpoint.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/BinaryMaskGenerator.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/FaceSegmentation.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/LinkNet.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/ShapeApproximation.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/man/man1/tqdm.1" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/model-dsbowl2018-3.h5" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/testing/2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/testing/6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/testing/7.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/testing/aa.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/testing/b.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/testing/bb.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/testing/c.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/testing/cc.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/testing/dd.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/testing/e.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/testing/ee.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/testing/g.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/testing/gg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/testing/h.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/testing/i.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/testing/ii.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/testing/j.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/testing/k.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/testing/m.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/testing/n.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/testing/o.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/testing/p.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/testing/r.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/testing/s.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/testing/t.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/testing/u.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/testing/w.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/testing/x.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/testing/z.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/Scripts/easy_install-3.6.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/Scripts/easy_install.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/Scripts/freeze_graph.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/Scripts/iptest.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/Scripts/iptest3.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/Scripts/ipython.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/Scripts/ipython3.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/Scripts/jsonschema.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/Scripts/jupyter-bundlerextension.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/Scripts/jupyter-console.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/Scripts/jupyter-kernel.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/Scripts/jupyter-kernelspec.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/Scripts/jupyter-migrate.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/Scripts/jupyter-nbconvert.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/Scripts/jupyter-nbextension.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/Scripts/jupyter-notebook.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/Scripts/jupyter-qtconsole.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/Scripts/jupyter-run.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/Scripts/jupyter-serverextension.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/Scripts/jupyter-troubleshoot.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/Scripts/jupyter-trust.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/Scripts/jupyter.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/Scripts/markdown_py.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/Scripts/pip.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/Scripts/pip3.6.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/Scripts/pip3.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/Scripts/pygmentize.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/Scripts/pythonw.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/Scripts/saved_model_cli.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/Scripts/skivi.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/Scripts/tensorboard.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/Scripts/tflite_convert.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/Scripts/toco.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/Scripts/toco_from_protos.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/Scripts/tqdm.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/Scripts/wheel.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/pip-selfcheck.json" beforeDir="false" afterPath="$PROJECT_DIR$/venv/pip-selfcheck.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/venv/requirements.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -64,9 +61,9 @@
           <entry key="project.open.time.17" value="1" />
           <entry key="project.open.time.249" value="1" />
           <entry key="project.open.time.5" value="1" />
-          <entry key="project.open.time.8" value="3" />
+          <entry key="project.open.time.8" value="4" />
           <entry key="project.open.time.9" value="3" />
-          <entry key="project.opened" value="25" />
+          <entry key="project.opened" value="26" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -106,8 +103,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/venv/FaceSegmentation.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="47" lean-forward="true" selection-start-line="13" selection-start-column="47" selection-end-line="13" selection-end-column="47" />
+            <state>
+              <caret line="9" column="39" selection-start-line="9" selection-start-column="39" selection-end-line="9" selection-end-column="39" />
               <folding>
                 <element signature="e#0#42#0" expanded="true" />
               </folding>
@@ -118,8 +115,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/venv/LinkNet.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-306">
-              <caret selection-end-column="9" />
+            <state>
+              <caret selection-end-line="25" selection-end-column="23" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -222,6 +219,9 @@
       </pane>
       <pane id="Scope" />
     </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -400,20 +400,19 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.32507902" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13277134" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.7349842" visible="true" weight="0.32936078" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.7349842" weight="0.32936078" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.7913593" weight="0.283857" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49894625" weight="0.32936078" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.4963119" weight="0.32936078" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.4963119" visible="true" weight="0.99349946" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.2650158" side_tool="true" weight="0.32936078" />
       <window_info anchor="bottom" id="Python Console" order="10" sideWeight="0.49947312" weight="0.32936078" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -768,9 +767,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/venv/SanityCheck.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/SanityCheck.py" />
     <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/colorama/ansitowin32.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
@@ -792,9 +789,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/venv/sub-dsbowl2018-1.csv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/sub-dsbowl2018-1.csv" />
     <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/pandas/core/dtypes/generic.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -869,29 +864,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/venv/FacialKeypointsRecognition.ipynb">
-      <provider selected="true" editor-type-id="ipnb-editor">
+    <entry file="file://$PROJECT_DIR$/venv/FacialKeypointsRecognition.ipynb" />
+    <entry file="file://$PROJECT_DIR$/venv/FaceSegmentation.py">
+      <provider selected="true" editor-type-id="text-editor">
         <state>
-          <selected id="0" />
+          <caret line="9" column="39" selection-start-line="9" selection-start-column="39" selection-end-line="9" selection-end-column="39" />
+          <folding>
+            <element signature="e#0#42#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/venv/LinkNet.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-306">
-          <caret selection-end-column="9" />
+        <state>
+          <caret selection-end-line="25" selection-end-column="23" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/venv/FaceSegmentation.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="47" lean-forward="true" selection-start-line="13" selection-start-column="47" selection-end-line="13" selection-end-column="47" />
-          <folding>
-            <element signature="e#0#42#0" expanded="true" />
           </folding>
         </state>
       </provider>
