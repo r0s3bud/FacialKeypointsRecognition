@@ -30,6 +30,9 @@ def load(test=False, width=96, height=96, sigma=5):
     df = df.dropna()
     df = df.fillna(-1)
 
+    myprint = df.iloc(0).obj
+    print(myprint)
+
     X = np.vstack(df['Image'].values) / 255.  # changes valeus between 0 and 1
     X = X.astype(np.float32)
 
@@ -237,7 +240,7 @@ if __name__ == "__main__":
     X, df= load2d(TEST)
 
     reshapedImages = [np.reshape(n, (96, 96)) for n in X]
-    executor = concurrent.futures.ProcessPoolExecutor(4)
+    executor = concurrent.futures.ProcessPoolExecutor(1)
 
     if TEST:
         futures = [executor.submit(save_test_images, item, index) for index, item in

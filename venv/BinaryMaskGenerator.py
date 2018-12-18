@@ -141,7 +141,7 @@ for i in range(10):
     for j, lab in enumerate(nm_landmarks[::2]):
         ax = fig.add_subplot(2, Nplot / 2, j + 2)
         ax.imshow(y_train[i, :, :, j], cmap="gray")
-        ax.set_title(str(j) + "\n" + lab[:-2])
+        ax.set_title(str(j) + "\n" + lab[:-2], fontsize=10)
     plt.show()
 
 

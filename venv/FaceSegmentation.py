@@ -4,6 +4,10 @@ from skimage.transform import resize
 import numpy as np
 import matplotlib.pyplot as plt
 import os
+import tkinter as tk
+from tkinter import filedialog
+import uuid
+import cv2
 
 def mean_iou(y_true, y_pred):
     prec = []
@@ -20,34 +24,40 @@ IMG_WIDTH = 96
 IMG_HEIGHT = 96
 IMG_CHANNELS = 3
 
-model = load_model('model-dsbowl2018-3.h5', custom_objects={'mean_iou': mean_iou}, compile = False)
+root = tk.Tk()
+root.withdraw()
+
+model = load_model('model_best.h5', custom_objects={'mean_iou': mean_iou}, compile = False)
 
 X_test = np.zeros((1, IMG_HEIGHT, IMG_WIDTH, IMG_CHANNELS), dtype=np.uint8)
 
-fileNames = next(os.walk('testing/'))[2]
+# fileNames = next(os.walk('testing/'))[2]
+#
+# for fileName in fileNames:
 
-for fileName in fileNames:
+file_path = filedialog.askopenfilename()
 
-    img = imread('testing/' + str(fileName))[:,:,:IMG_CHANNELS]
-    img = resize(img, (IMG_HEIGHT, IMG_WIDTH), mode='constant', preserve_range=True)
-    X_test[0] = img
+guid = str(uuid.uuid4())
+outStream = cv2.VideoWriter('output/images/' + guid + '.jpg', cv2.VideoWriter_fourcc('M', 'J', 'P', 'G'), 16, (369, 369))
 
-    preds_test = model.predict(X_test, verbose=1)
-    preds_test_t = (preds_test > 0.5).astype(np.uint8)
+img = imread(file_path)[:,:,:IMG_CHANNELS]
+img = resize(img, (IMG_HEIGHT, IMG_WIDTH), mode='constant', preserve_range=True)
+X_test[0] = img
 
-    fig = plt.figure(figsize=(6,6))
-    ax = fig.add_subplot(2, 2, 1)
-    ax.imshow(X_test[0], cmap="gray")
-    ax2 = fig.add_subplot(2, 2, 2)
-    ax2.imshow(np.squeeze(preds_test_t[0]))
-    ax3 = fig.add_subplot(2, 2, 3)
-    imageWithKeypoints = X_test[0]
-    keypoints = preds_test_t[0][:,:,0]
-    ax3.imshow(np.squeeze(imageWithKeypoints))
-    for rowIndex, row in enumerate(keypoints):
-        for columnIndex, value in enumerate(row):
-            # if value > 0 and (keypoints[rowIndex - 1][columnIndex] == 0 or keypoints[rowIndex + 1][columnIndex] == 0) :
-            if value > 0:
-                ax3.scatter(columnIndex, rowIndex, c='red')
+preds_test = model.predict(X_test, verbose=1)
+preds_test_t = (preds_test > 0.5).astype(np.uint8)
 
-    plt.show()
+imageWithKeypoints = X_test[0]
+keypoints = preds_test_t[0][:,:,0]
+
+for rowIndex, row in enumerate(keypoints):
+    for columnIndex, value in enumerate(row):
+        # if value > 0 and (keypoints[rowIndex - 1][columnIndex] == 0 or keypoints[rowIndex + 1][columnIndex] == 0) :
+        if value > 0:
+            plt.scatter(columnIndex, rowIndex, c='red')
+
+fig = plt.imshow(np.squeeze(imageWithKeypoints))
+plt.axis('off')
+fig.axes.get_xaxis().set_visible(False)
+fig.axes.get_yaxis().set_visible(False)
+plt.savefig('output/images/' + guid + '.jpg', bbox_inches='tight', pad_inches=0)

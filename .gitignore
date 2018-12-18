@@ -4,3 +4,10 @@ venv/mytestdata/*
 venv/share/*
 venv/old_model/*
 venv/data/*
+venv/simple/*
+venv/testing/*
+venv/Lib/*
+venv/Lib/site-packages/*
+venv/myaugmenteddata/*
+venv/lfw/*
+venv/output/*

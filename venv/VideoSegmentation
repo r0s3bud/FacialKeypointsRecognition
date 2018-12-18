@@ -1,0 +1,119 @@
+import numpy as np
+import cv2
+import face_recognition
+from keras.models import load_model
+from skimage.transform import resize
+import tkinter as tk
+from tkinter import filedialog
+import uuid
+import matplotlib.pyplot as plt
+
+def prepareWindow():
+    root = tk.Tk()
+    root.withdraw()
+    return root
+
+def getInputDimensions():
+    return 224,224
+
+def getFrameCount(videoStream):
+    property_id = int(cv2.CAP_PROP_FRAME_COUNT)
+    return int(cv2.VideoCapture.get(videoStream, property_id))
+
+def getDimensionsOfStream(videoStream):
+    return int(videoStream.get(3)), int(videoStream.get(4))
+
+def createOutputFileStream(frameWidth, frameHeight, frameCount):
+    if frameCount == 1:
+        guid = str(uuid.uuid4())
+        return cv2.VideoWriter('output/images/' + guid + '.jpg', cv2.VideoWriter_fourcc('M', 'J', 'P', 'G'), 16, (frameWidth, frameHeight))
+    else:
+        return cv2.VideoWriter('output.avi', cv2.VideoWriter_fourcc('M', 'J', 'P', 'G'), 16, (frameWidth, frameHeight))
+
+def segmentFacesInStream(videoStream, outStream, faceHeight, faceWidth):
+    while (videoStream.isOpened()):
+        ret, frame = videoStream.read()
+
+        if ret == True:
+
+            facePixels = np.zeros((1, faceHeight, faceWidth, 3), dtype=np.uint8)
+
+            gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+
+            face_locations = face_recognition.face_locations(frame)
+
+            for faceIndex, locations in enumerate(face_locations):
+                top, right, bottom, left = locations;
+
+                face_img = frame[top:bottom, left:right, :]
+                face_img_shape = ((right - left), (bottom - top))
+                face_img = resize(face_img, (faceHeight, faceWidth), mode='constant', preserve_range=True)
+
+
+                facePixels[0] = face_img
+                dummyImage = np.zeros((frameWidth, frameHeight), dtype=np.uint8)
+
+                downsampled_to_actual_horizontal_ratio = faceHeight / face_img_shape[0]
+                downsampled_to_actual_vertical_ratio = faceWidth / face_img_shape[1]
+
+                predictions = model.predict(facePixels, verbose=1)
+                predictions_over_threshold = (predictions > 0.75).astype(np.uint8)
+
+                predictions_over_threshold_upsampled = np.zeros((1, face_img_shape[0], face_img_shape[1], 1),
+                                                                dtype=np.uint8)
+
+                predictions_over_threshold_upsampled = resize(predictions_over_threshold,
+                                                              (1, face_img_shape[0], face_img_shape[1], 1),
+                                                              mode='constant', preserve_range=True)
+
+                dummyImage = np.zeros((1, frameWidth, frameHeight, 1), dtype=np.uint8)
+
+                prediction_mask = np.zeros((frameWidth, frameHeight), dtype=np.int32)
+
+                for dummyIndex, three_dim in enumerate(predictions_over_threshold_upsampled):
+                    for rowIndex, row in enumerate(three_dim):
+                        for columnIndex, value in enumerate(row):
+                            if (value[0] == 1):
+                                # cv2.rectangle(frame, (left,top),(right,bottom), (0, 0, 255), thickness=1,
+                                #            lineType=8, shift=0)
+                                cv2.circle(frame, (columnIndex + left, rowIndex + top), 1, (0, 0, 255), thickness=1,
+                                           lineType=8, shift=0)
+
+                cv2.imshow('a',prediction_mask)
+
+            cv2.imshow('frame', frame)
+            outStream.write(frame)
+
+            if cv2.waitKey(1) & 0xFF == ord('q'):
+                break
+        else:
+            break
+
+def closeStreamsAndWindows(videoStream, outStream):
+    videoStream.release()
+    outStream.release()
+    cv2.destroyAllWindows()
+
+window = prepareWindow()
+faceHeight, faceWidth = getInputDimensions()
+
+
+model = load_model('model_post_augmentation.h5', compile = False)
+
+file_path = filedialog.askopenfilename()
+videoStream = cv2.VideoCapture(file_path)
+frameCount = getFrameCount(videoStream)
+frameWidth, frameHeight = getDimensionsOfStream(videoStream)
+
+outStream = createOutputFileStream(frameWidth, frameHeight, frameCount)
+segmentFacesInStream(videoStream, outStream, faceHeight, faceWidth)
+closeStreamsAndWindows(videoStream, outStream)
+
+
+
+
+
+
+
+
+

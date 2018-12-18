@@ -26,10 +26,10 @@ from keras import backend as K
 import tensorflow as tf
 
 # Set some parameters
-IMG_WIDTH = 96
-IMG_HEIGHT = 96
+IMG_WIDTH = 224
+IMG_HEIGHT = 224
 IMG_CHANNELS = 3
-TRAIN_PATH = 'mydata/'
+TRAIN_PATH = 'myaugmenteddata/'
 TEST_PATH = 'mytestdata/'
 
 warnings.filterwarnings('ignore', category=UserWarning, module='skimage')
@@ -197,14 +197,14 @@ model.compile(optimizer = 'adam',
 
 # Fit model
 earlystopper = EarlyStopping(patience=20, verbose=1)
-checkpointer = ModelCheckpoint('model-dsbowl2018-3.h5', verbose=1, save_best_only=True)
+checkpointer = ModelCheckpoint('model_post_augmentation.h5', verbose=1, save_best_only=True)
 results = model.fit(X_train, Y_train,
                     validation_split=0.25,
                     batch_size=16, epochs=200,
                     callbacks=[earlystopper, checkpointer])
 
 # Predict on train, val and test
-model = load_model('model-dsbowl2018-3.h5', custom_objects={'mean_iou': mean_iou}, compile = False)
+model = load_model('model_post_augmentation.h5', custom_objects={'mean_iou': mean_iou}, compile = False)
 preds_train = model.predict(X_train[:int(X_train.shape[0]*0.9)], verbose=1)
 preds_val = model.predict(X_train[int(X_train.shape[0]*0.9):], verbose=1)
 preds_test = model.predict(X_test, verbose=1)
